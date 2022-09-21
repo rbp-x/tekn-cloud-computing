@@ -1,8 +1,6 @@
-# Minggu-02
-## Software as a Service
+# Teknologi Cloud Computing
 
-[Rangkuman SaaS](rangkuman-saas.md)
-[Rangkuman SaaS (Software as a Service)](rangkuman-saas.md)
+## Repository Mata Kuliah Praktikum Teknologi Cloud Computing
 
-[Layanan SaaS](layanan-saas.md)
-[Layanan SaaS (Software as a Service)](layanan-saas.md)
+NIM  : 215411119 <br>
+Nama : Rahadiyan Bondan Permadi
