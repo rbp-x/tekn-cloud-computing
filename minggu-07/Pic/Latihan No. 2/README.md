@@ -29,7 +29,7 @@ To initialize pass, run:
     
 Once pass is initialized, you can sign in on the Docker Dashboard and pull your private images. When credentials are used by the Docker CLI or Docker Desktop, a user prompt may pop up for the password you set during the gpg key generation.
 
-    $ docker pull molly/privateimage
+    $ docker pull bondan/privateimage
 
 
   
