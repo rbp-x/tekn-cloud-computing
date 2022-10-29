@@ -1,4 +1,4 @@
-# Tugas Praktikum Teknologi Cloud Computing - Minggu 8 
+# Latihan Praktikum Teknologi Cloud Computing - Minggu 8 
 #### Rahadiyan Bondan Permadi
 ##### 215411119
 
