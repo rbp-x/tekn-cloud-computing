@@ -33,4 +33,4 @@
 
 ![4.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan%20Docker%20Swarm/Pic/4_join_node_worker_to_swarm.jpg)
 
-	docker swarm join --token 	SWMTKN-1-5w2527mejpqx0tg52pkv74w037eopa0yu9q3zw5foou09eod0x-7r3sfk4kbfea9z67hza7ir0ix 192.176.60.56:2377
+
