@@ -30,8 +30,8 @@
 #### jika sukses selanjutnya ke tahap running kontainer dengan menggunakan image httpd seperti dibawah
 
     $ sudo docker run -d --network tcc-rbp-pertemuan-ke8 --ip 192.176.60.56 httpd
-![5.jp](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/3_running_container_dg_new_network_from_image_httpd.jpg)
-![6.jppg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/4_pulling_image_container_dg_new_network_httpd.jpg)
+![5.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/3_running_container_dg_new_network_from_image_httpd.jpg)
+![6.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/4_pulling_image_container_dg_new_network_httpd.jpg)
 
 #### pastikan kontainer tidak ada error menggunakan perintah 
 
@@ -42,4 +42,53 @@
 
     $ sudo docker network inspect tcc-rbp-pertemuan-ke8
 ![8.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/6_cek_address_kontainer.jpg)
+
+#### Menghapus network 
+    $ sudo docker network rm "nama network"
+![9.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/7_hapus_network.jpg)
+
+#### membuat Container dengan nama node1 dan node2 dari image engine stable-alpine yang udah tersedia 
+    $ docker run -d --name node1 --network tcc-net nginx:stable-alpine
+    $ docker run -d --name node2 --network tcc-net nginx:stable-alpine    
+![10.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/8_membuat_container.jpg)
+
+#### memeriksa network yang kita buat menggunakan perintah : 
+    $ docker network inspect tcc-net
+![11.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/9_inspect_network_node1_node2.jpg)
+
+#### memeriksa koneksi container node1 dan node2 didalam network yang kita buat menggunakan perintah : 
+    $ docker exec node1 ping node2 
+![12.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/10_uji_ping_container_node1_node2.jpg)
+
+#### memeriksa koneksi birdge sebagai default network menggunakan perintah : 
+    $ docker network inspect bridge
+![13.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/11_inspect_default_bridge.jpg)
+
+#### membuat container nodeX untuk pengujian selanjutnya menggunakan perintah : 
+    $ docker container create --name nodeX nginx:stable-alpine
+![14.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/12_membuat_container_nodeX_blm_ada_ipNya.jpg)
+
+#### Start container nodeX untuk pengujian selanjutnya menggunakan perintah : 
+    $ docker start nodeX 
+![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/13_docker_start_nodeX.jpg)
+![16.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/14_docker_container_nodeX_started.jpg)
+
+#### menghubungkan container nodeX ke network tcc-net dengan perintah : 
+    $ docker network connect tcc-net nodeX 
+![17.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/15_pindahkan_container_nodeX_ke_network_tcc-net.jpg)
+
+#### uji konektivitas antar node / container nodeX dengan node1 dan node2 dengan perintah : 
+    $ docker network connect tcc-net nodeX 
+![18.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/16_nodeX_ping_node1_sukses.jpg)
+![19.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/17_nodeX_ping_node2_sukses.jpg)
+
+#### melihat masing - masing network dan container yang berhasil ditambahkan dan dijalankan : 
+    $ docker network connect tcc-net nodeX 
+![20.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan/18_hasil_bertambah_masing_masing_container.jpg)
+
+## Sekian untuk management Docker Network
+
+
+
+
 
