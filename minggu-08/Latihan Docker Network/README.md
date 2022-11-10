@@ -50,7 +50,7 @@
 #### membuat Container dengan nama node1 dan node2 dari image engine stable-alpine yang udah tersedia 
     $ docker run -d --name node1 --network tcc-net nginx:stable-alpine
     $ docker run -d --name node2 --network tcc-net nginx:stable-alpine    
-![https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan%20Docker%20Network/Pic/8_membuat_container.jpg)
+![10.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-08/Latihan%20Docker%20Network/Pic/8_membuat_container.jpg)
 
 #### memeriksa network yang kita buat menggunakan perintah : 
     $ docker network inspect tcc-net
