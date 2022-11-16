@@ -70,7 +70,8 @@ Dalam praktikum ini ada beberapa tahapan diantaranya adalah :
 6. Perintah exit untuk keluar dari sesi shell dan menghentikan proses bash dan container keluar.
     
     $ exit
-	![6.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/6.exit_leave_session.jpg)
+
+![6.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/6.exit_leave_session.jpg)
 
 7. Kemudian untuk mengecek versi host virtual machine ketikan perintah :
    
