@@ -211,6 +211,10 @@ bondanproject/myrepo_9
 
    $ docker image push $DOCKERID/linux_tweet_app:2.0
    
+![22.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/21.docker_push_2.0.jpg)
+
+Kita Lihat hasilnya pada dockerhub 
+   
 ![22.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/22.docker_hub_after_linux_tweet_app_push.jpg)
     
     
