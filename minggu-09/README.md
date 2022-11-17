@@ -183,6 +183,31 @@ bondanproject/myrepo_9
 
 ![17.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/17.cp.jpg)
 
+18. Update Images :
+    $ docker image build --tag $DOCKERID/linux_tweet_app:2.0 .
+    
+    $ docker image ls
+
+![18.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/23.update_images_2.0.jpg)
+
+
+19. Push Images to Docker HUB
+    List Images Docker Host
+    
+    $ docker image ls -f reference="$DOCKERID/*"
+
+![19.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/27.push_images_to_docker.jpg)
+    
+20. Docker Login :
+    $ docker login
+
+![20.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/28.before_push_docker_login.jpg)
+
+21. Push Images to DockerHub
+
+    
+    
+
 18. Selanjutnya mengcopy file index.html kedalam container 
 
 Maka hasilnya akan seperti dibawah ini : 
