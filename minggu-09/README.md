@@ -147,10 +147,21 @@ Sebelumnya kita pastikan berada di dalam direktori linux_tweet_app dengan perint
 	CMD : menentukan perintah apa yang akan dijalankan saat container di jalankan.
 
 15. Selanjutnya kita menggunakan docker image build untuk membuat Docker Image baru dalam Dockerfile :
+    Sebelumnya kita lakukan langkah untuk mengexport DOCKERID kita, disini saya export DOCKERID=bondanproject/myrepo_9
+    
+    $ export DOCKERID=bondanproject/myrepo_9
+    
+    $  cat Dockerfile
+    
+    $  echo $DOCKERID
+    
+bondanproject/myrepo_9
 
     $ docker image build --tag $DOCKERID/linux_tweet_app:1.0 .
     
-    ![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/15.docker_image_build_a_simple_website_images.jpg)
+    Selengkapnya ada pada gambar dibawah ini :
+    
+![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.docker_myrepo_9_build_a_simple_website_images.jpg)
 
 16. Selanjutnya kita menggunakan docker container run untuk memulai container baru dari image yang dibuat :
 
