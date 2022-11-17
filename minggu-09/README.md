@@ -161,8 +161,8 @@ bondanproject/myrepo_9
     
     Selengkapnya ada pada gambar dibawah ini :
     
-![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.docker_myrepo_9_build_a_simple_website_images.jpg)
-![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.docker_myrepo_9_build_a_simple_website_images2.jpg)
+![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.export_dockerid_bondanproject.jpg)
+![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.export_dockerid_bondanproject2.jpg)
 
 16. Selanjutnya kita menggunakan docker container run untuk memulai container baru dari image yang dibuat :
 
@@ -205,10 +205,17 @@ bondanproject/myrepo_9
 
 21. Push Images to DockerHub
 
+   $ docker image push $DOCKERID/linux_tweet_app:1.0
+   
+![21.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/21.docker_push_1.0.jpg)
+
+   $ docker image push $DOCKERID/linux_tweet_app:2.0
+   
+![22.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/22.docker_hub_after_linux_tweet_app_push.jpg)
     
     
 
-18. Selanjutnya mengcopy file index.html kedalam container 
+22. Selanjutnya kita lihat hasil dari modifikasi file index.html
 
 Maka hasilnya akan seperti dibawah ini : 
 
