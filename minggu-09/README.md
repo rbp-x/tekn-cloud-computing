@@ -162,6 +162,7 @@ bondanproject/myrepo_9
     Selengkapnya ada pada gambar dibawah ini :
     
 ![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.docker_myrepo_9_build_a_simple_website_images.jpg)
+![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Pic/16.docker_myrepo_9_build_a_simple_website_images2.jpg)
 
 16. Selanjutnya kita menggunakan docker container run untuk memulai container baru dari image yang dibuat :
 
