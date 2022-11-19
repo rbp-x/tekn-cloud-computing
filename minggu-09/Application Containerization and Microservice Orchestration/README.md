@@ -335,36 +335,37 @@ kita booting dan up service
 
 # Step 6: Swap Python API Service with Ruby Conclusions
 
-   $ git checkout step6
-   $ tree
+    $ git checkout step6
+    
+    $ tree
   
 ![41.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/41.checkout_step6.jpg)
 
 
-   $ cat api/linkextractor.rb
+    $ cat api/linkextractor.rb
 
 ![42.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/42.cat_api_linkextractor_rb.jpg)
 
 
-   $ cat api/Dockerfile
+    $ cat api/Dockerfile
 
 ![43.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/43.cat_api_dockerfile_step6.jpg)
 
 
-   $ cat docker-compose.yml
+    $ cat docker-compose.yml
 
 ![44.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/44.cat_docker_compose_yml.jpg)
 
 
 dalam ervice ii kita build dan jalankan docker-compose 
 
-   $ docker-compose up -d --build 
+    $ docker-compose up -d --build 
 
 ![45.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/45.docker_compose_up_and_build.jpg)
 
 Akses API dengan port baru 
 
-   $ curl -i http://localhost:4567/api/http://example.com/
+    $ curl -i http://localhost:4567/api/http://example.com/
 
 ![46.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/46.access_api_new_Port.jpg)
 
@@ -373,13 +374,13 @@ Akses API dengan port baru
 
 Sekarang kita lakukan shut-down terhadap compose
 
-   $ docker-compose down
+    $ docker-compose down
 
 ![47.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/47.docker_compose_down.jpg)
 
 cek apakah log masih ada setelah service di matikan 
 
-   $ cat logs/extraction.log
+    $ cat logs/extraction.log
    
 ![48.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/48.logs.jpg)
 
