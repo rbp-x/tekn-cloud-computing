@@ -360,7 +360,31 @@ dalam ervice ii kita build dan jalankan docker-compose
 
    $ docker-compose up -d --build 
 
-gambar 45
+![45.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/45.docker_compose_up_and_build.jpg)
+
+Akses API dengan port baru 
+
+   $ curl -i http://localhost:4567/api/http://example.com/
+
+![46.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/46.access_api_new_Port.jpg)
+
+![46.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/46.interface_extractor.jpg)
+
+
+Sekarang kita lakukan shut-down terhadap compose
+
+   $ docker-compose down
+
+![47.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/47.docker_compose_down.jpg)
+
+cek apakah log masih ada setelah service di matikan 
+
+   $ cat logs/extraction.log
+   
+![48.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/48.logs.jpg)
+
+Sejauh ini, kita telah mempraktekan docker-compose untuk mengatur beberapa aplikasi berjalan dalam lingkup pengembangan.
+
 
 ## Software yang Diperlukan
 
