@@ -220,7 +220,7 @@ Selanjutnya membuat request HTTP dalam bentuk url
 
    $ curl -i http://localhost:5000/api/http://example.com/
 
-gambar 26
+![26.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/26request_http.jpg)
 
 setelah servis API berjalan dan mendapatkan respon JSON berupa Link url seperti pada gambar.
 
@@ -228,7 +228,7 @@ kita dapat melihat log menggunakan perintah :
 
    $ docker container logs linkextractor
 
-gambar 27
+![27.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/27.logs_http.jpg)
 
 kita mematikan dan menghapus container log setelah ditampilkan menggunakan perintah dibawah :
 
@@ -243,31 +243,31 @@ kita checkout dulu file step4
    $ git checkout step4
    $ tree
 
-gambar 28
+![28.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/28.checkou_step4.jpg)
 
 selanjutnya kita lihat file docker-compose.yml
 
    $ cat docker-compose.yml
 
-gambar 29
+![29.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/29.cat_docker_compose_yml.jpg)
 
 kita lihat isi file index.php
 
    $ cat www/index.php
 
-gambar 30
+![30.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/30.cat_index_php.jpg)
 
 selanjut kita jalankan docker compose
 
    $ docker-compose up -d --build
 
-gambar 31
+![31.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/31.docker_compose_up.jpg)
 
 pastikan bahwa keduanya layanan berjalan docker container 
 
    $ docker container ls
 
-gambar 32
+![32.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/32.docker_container_ls_step4.jpg)
 
 selanjutnya kita test service API
 
@@ -278,43 +278,51 @@ reloading
    $ git reset --hard
 
    $ docker-compose down
+   
+   
+![33.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/33.reloading.jpg)
+   
+![32.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/32.GUI%20Link%20Estractor.jpg)
 
-gambar 33
 
 Step 5: Redis Service for Caching
 
    $ git checkout step5
    $ tree
  
-gambar 34
+![34.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/34.checkout_step5.jpg)
 
 kita tampilkan Dockerfile
 
    $ cat www/Dockerfile
 
-gambar 35
+![35.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/35.cat_dockerfile_step5.jpg)
 
 kita tampilkan main.py
 
    $ cat api/main.py
 
-gambar 36
+![36.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/36.cat_api_json.jpg)
+
 
 selanjutnya kita tampilkan docker-compose.yml
 
    $ cat docker-compose.yml
 
-gambar 37
+![37.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/37.cat_docker_compose_yml.jpg)
+
 
 kita booting dan up service
 
    $ docker-compose up -d --build
 
-gambar 38
+![38.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/38.docker_compose_build_up.jpg)
+
 
    $ docker-compose exec redis redis-cli monitor
 
-gambar 39
+![39.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/39.redis.jpg)
+
 
    $ sed -i 's/Link Extractor/Super Link Extractor/g' www/index.php
 
@@ -322,26 +330,31 @@ gambar 39
 
    $ docker-compose down
 
-gambar 40
+![40.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/40..jpg)
+
 
 # Step 6: Swap Python API Service with Ruby Conclusions
 
   $ git checkout step6
   $ tree
+  
+![41.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/41.checkout_step6.jpg)
 
-gambar 41
 
   $ cat api/linkextractor.rb
 
-gambar 42
+![42.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/42.cat_api_linkextractor_rb.jpg)
+
 
   $ cat api/Dockerfile
 
-gambar 43
+![43.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/43.cat_api_dockerfile_step6.jpg)
+
 
   $ cat docker-compose.yml
 
-gambar 44
+![44.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-09/Application%20Containerization%20and%20Microservice%20Orchestration/Pict/44.cat_docker_compose_yml.jpg)
+
 
 dalam ervice ii kita build dan jalankan docker-compose 
 
