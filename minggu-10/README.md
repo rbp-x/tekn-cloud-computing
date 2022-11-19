@@ -21,25 +21,25 @@ Docker Network Command
 
       $ docker network
 
-gambar 1
+![1.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/1.docker_network.jpg)
 
 Daftar docker network
 
       $ docker network ls
 
-gambar 2
+![2.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/2.docker_network_ls.jpg)
 
 Inspect a network
 
       $ docker network inspect bridge
 
-gambar 3
+![3.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/3.inspect_docker_network.jpg)
 
 Docker info
 
       $ docker info
 
-gambar 4
+![4.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/4.docker_info.jpg)
 
 
 Section #2 - Bridge Networking
@@ -48,96 +48,96 @@ daftar docker network
 
       $ docker network ls
 
-gambar 5
+![5.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/5.docker_network_ls.jpg)
 
 
 Selanjutnya kita mulai install dulu brctl dengan perintah 
 
       $ sudo apt-get install bridge-utils
 
-gambar 6
+![6.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/6.install_bridge_utils.jpg)
 
       $ brctl show
 
-gambar 6
+![6.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/6.brctl_show.jpg)
 
 menampilkan detail dari docker0
 
       $ ip a
 
-gambar 7
+![7.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/7.ip_a.jpg)
 
 Membuat container baru dengan menjalankan perintah :
 
       $ docker run -dt ubuntu sleep infinity
 
-gambar 8
+![8.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/8.create_container.jpg)
 
-gambar 8
+![8.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/8.create_container_2.jpg)
 
 Memverivikasi container
 
       $ docker ps
 
-gambar 9
+![9.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/9.docker_ps.jpg)
 
 Kembali kita tampilkan bridge-utils menggunakan 
 
       $ brctl show
 
-gambar 10
+![10.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/10.brctl_show.jpg)
 
 kita inspect kembali menggunakan perintah 
 
       $ docker network inspect bridge
 
-gambar 11
+![11.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/11.inspect_bridge.jpg)
 
 Lakukan ping dengan 172.17.0.2
 
       $ ping -c5 172.17.0.2
 
-gambar 12
+![12.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/12.ping.jpg)
 
 Docker ps
 
       $ docker ps
 
-gambar 13
+![13.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/13.docker_ps.jpg)
 
 sekarang kita coba menjalankan didalam shell container ubuntu dengan perintah :
 
       $ docker exec -it fa39e102f0a4 /bin/bash
 
-gambar 14
+![14.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/14.docker_exec.jpg)
 
 Selanjutnya kita install program ping dengan menjalankan perintah dibawah ini :
 
       $ apt-get update && apt-get install -y iputils-ping
 
-gambar 15
+![15.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/15.install_program_ping.jpg)
 
 selanjutnya kita coba koneksi dengan ping ke github
 
       $ ping -c5 www.github.com
 
-gambar 16
+![16.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/16.ping_docker_com.jpg)
 
 Konfigurasi NAT untuk koneksi luar dengan memulai membuat container baru nginx
 
       $ docker run --name web1 -d -p 8080:80 nginx
 
-gambar 17
+![17.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/17.nginx.jpg)
 
       $ docker ps
 
-gambar 18
+![18.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/18.docker_ps.jpg)
 
 kita buka web dengan durl 
 
       $ curl 127.0.0.1:8080
 
-gambar 19
+![19.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/19.curl.jpg)
 
 
 Section #3 - Overlay Networking
