@@ -5,7 +5,7 @@
 
 ## Materi
  
-# Bagian ini menjelaskan menjelaskan tentang Docker Compose untuk App Containerization and Microservice Orchestration
+# Bagian ini menjelaskan tentang Docker Compose untuk App Containerization and Microservice Orchestration
 
 **Application Containerization**
 
