@@ -149,7 +149,7 @@ Jalankan perintah berikut ini :
 
       $ docker swarm init --advertise-addr $(hostname -i)
 
-gambar 20
+![20.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/20.docker_swarm_init.jpg)
 
 Jalankan docker-swarm-join
 
@@ -157,118 +157,119 @@ Jalankan docker-swarm-join
 
 	$ docker node ls
 
-gambar 21
+![21.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/21.docker_swarm_join.jpg)
 
 Membuat jaringan overlay
 
 	$ docker network create -d overlay overnet
 	$ docker network ls
 
-gambar 22
-gambar 23
+![22.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/22.create_overlay_network.jpg)
+![23.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/23.docker_network_ls.jpg)
 	
 Jalankan juga di terminal kedua 
 	
 	$ docker network ls
 
-gambar 24
+![24.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/24.docker_network_ls_on_second_console.jpg)
 
 Kita inspect overnet
 
 	$ docker network inspect overnet
 
-gambar 25
+![25.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/25.docker_network_overnet.jpg)
 
 # Step 3 Saatnya membuat layanan menggunakan jaringan yang sudah terinisialisasi
 
 	$ docker service create --name myservice \
 	--network overnet \
 	--replicas 2 \
-	ubuntu sleep infinity
+	ubuntu sleep infinity	
+	
+![26.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/26.create_service.jpg)
 	
 	$ docker service ls
 
-gambar 26
-gambar 26
+![26.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/26.create_service_ls.jpg)
 
 Memverifikasi single task (replika)
 
 	$ docker service ps myservice
 
-gambar 27
+![27.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/27.docker_service_ps.jpg)
 
 	$ docker network ls
 
-gambar 28
+![28.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/28.docker_network_ls.jpg)
 
 	$ docker network inspect overnet
 
-gambar 29
+![29.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/29.docker_network_ls_inspect.jpg)
 
 Test jaringan 
 
 	$ docker network inspect overnet
 
-gambar 30
+![30.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/30.docker_network_inspect_overnet.jpg)
 
 	$ docker ps
 
-gambar 31
+![31.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/31.%20docker_ps.jpg)
 
 install 
 	
 	$ docker exec -it e345aed47cba /bin/bash
 
-GAMBAR 32
+![32.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/32.docker_exec.jpg)
 
 	$ apt-get update && apt-get install -y iputils-ping
 
-gambar 33
+![33.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/33.install.jpg)
 	
 test ping 10.0.0.3
 
 	$ ping 10.0.0.3 
 
-gambar 34
+![34.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/34.test_ping.jpg)
 
 	$ cat /etc/resolv.conf
 
-gambar 35
+![35.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/35.cat.jpg)
 
 ping myservice
 	
 	$ ping -c5 myservice
 
-gambar 36
+![36.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/36.ping_myservice.jpg)
 
 docker inspect myservice
 
 	$ docker service inspect myservice
 
-gambar 37
+![37.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/37.docker_inspect.jpg)
 
 # cleaning up
 
 	$ docker service rm myservice
 
-gambar 38
+![38.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/38.cleaningup.jpg)
 
 	$ docker ps
 
-gambar 39
+![39.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/39.docker_ps.jpg)
 
 	$ docker kill 3ae8a2ac8297
 
-gambar 40
+![40.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/40.docker_kill.jpg)
 
 	$ docker swarm leave --force
 
-gambar 41
+![41.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-10/Pict/41.docker_leave.jpg)
 
 	
 ## Software yang Diperlukan
 
-Linux, Docker
+Linux, Docker, Docker Network, Docker Swarm
 
 ```
 
