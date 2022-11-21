@@ -147,7 +147,124 @@ Pada langkah ini kita akan menginisialisasi swarm baru konek dengan node dan mem
 
 Jalankan perintah berikut ini :
 
-     $ docker swarm init --advertise-addr $(hostname -i)
+      $ docker swarm init --advertise-addr $(hostname -i)
+
+gambar 20
+
+Jalankan docker-swarm-join
+
+      $ docker swarm join --token SWMTKN-1-28egcsrt15whmx4a5i9n6u3d7blnhip4bik468xm95l9kuuaxr-68l5e9lr62nyscynu9ui3ewym 192.168.0.27:2377
+
+	$ docker node ls
+
+gambar 21
+
+Membuat jaringan overlay
+
+	$ docker network create -d overlay overnet
+	$ docker network ls
+
+gambar 22
+gambar 23
+	
+Jalankan juga di terminal kedua 
+	
+	$ docker network ls
+
+gambar 24
+
+Kita inspect overnet
+
+	$ docker network inspect overnet
+
+gambar 25
+
+# Step 3 Saatnya membuat layanan menggunakan jaringan yang sudah terinisialisasi
+
+	$ docker service create --name myservice \
+	--network overnet \
+	--replicas 2 \
+	ubuntu sleep infinity
+	
+	$ docker service ls
+
+gambar 26
+gambar 26
+
+Memverifikasi single task (replika)
+
+	$ docker service ps myservice
+
+gambar 27
+
+	$ docker network ls
+
+gambar 28
+
+	$ docker network inspect overnet
+
+gambar 29
+
+Test jaringan 
+
+	$ docker network inspect overnet
+
+gambar 30
+
+	$ docker ps
+
+gambar 31
+
+install 
+	
+	$ docker exec -it e345aed47cba /bin/bash
+
+GAMBAR 32
+
+	$ apt-get update && apt-get install -y iputils-ping
+
+gambar 33
+	
+test ping 10.0.0.3
+
+	$ ping 10.0.0.3 
+
+gambar 34
+
+	$ cat /etc/resolv.conf
+
+gambar 35
+
+ping myservice
+	
+	$ ping -c5 myservice
+
+gambar 36
+
+docker inspect myservice
+
+	$ docker service inspect myservice
+
+gambar 37
+
+# cleaning up
+
+	$ docker service rm myservice
+
+gambar 38
+
+	$ docker ps
+
+gambar 39
+
+	$ docker kill 3ae8a2ac8297
+
+gambar 40
+
+	$ docker swarm leave --force
+
+gambar 41
+
 	
 ## Software yang Diperlukan
 
@@ -155,3 +272,9 @@ Linux, Docker
 
 ```
 
+containerid
+
+node1 3ae8a2ac8297
+node2 ff36aa7e91e7
+
+# Selesai
