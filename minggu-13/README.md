@@ -211,6 +211,8 @@ Langkah - langkah Praktikum
 
 ![6.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-13/pict/modul%206/6.jpg)
 
+![7.jpg](https://raw.githubusercontent.com/rbp-x/tekn-cloud-computing/main/minggu-13/pict/modul%206/7.jpg)
+
 ## Software yang Diperlukan
 
 Linux, Kubernetes
